@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans";
+}
+
+body {
+  background-color: hsl(235, 21%, 11%);
+  min-height: 100vh;
+}
+
+/* Version light */
+
+body.light {
+  background-color: hsl(0, 0%, 98%);
+}
+
+/* Header */
+header.header {
+  height: 300px;
+  background-image: url(../img/bg-desktop-dark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header.header.light {
+  background-image: url(../img/bg-desktop-light.jpg);
+}
+
+/* Conteiner */
+
+
+section.conten {
+  width: 60%;
+  position: relative;
+  z-index: 10;
+  left: 20%;
+  top: -180px;
+}
+
+/* Title */
+section.conten div.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.conten div.title h1 {
+  color: hsl(0, 0%, 98%);
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+}
+
+section.conten div.title img {
+  cursor: pointer;
+}
+
+/* Form add */
+section.conten div.form-add,
+section.conten div.list-tasks {
+  margin-top: 30px;
+  background-color: hsl(235, 24%, 19%);
+  padding: 18px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 6px 1px hsl(235, 24%, 19%);
+}
+
+section.conten div.form-add.light,
+section.conten div.list-tasks.light {
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: hsl(0, 0%, 98%);
+}
+
+section.conten div.form-add form label,
+section.conten div.list-tasks div.item-task div.check-point {
+  display: inline-block;
+  min-width: 22px;
+  min-height: 22px;
+  max-width: 22px;
+  max-height: 22px;
+  border: 1px solid hsl(233, 14%, 35%);
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+section.conten div.form-add form input[type="text"] {
+  background-color: hsl(235, 24%, 19%);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 70%;
+  padding: 2px;
+  font-size: 18px;
+  line-height: 22px;
+  vertical-align: middle;
+  border-bottom: 1px solid hsla(0, 0%, 98%, 0.075);
+}
+
+section.conten div.form-add form input[type="text"].light {
+  background-color: hsl(0, 0%, 98%);
+  border-bottom: 1px solid hsl(233, 14%, 35%);
+}
+
+section.conten div.form-add form input[type="text"]:focus {
+  border: none;
+  outline: 0;
+  color: hsl(0, 0%, 98%) ;
+  font-size: 18px;
+  border-bottom: 1px solid hsl(0, 0%, 98%);
+}
+
+section.conten div.form-add form input[type="text"].light:focus {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 21%, 11%);
+  border-bottom: 1px solid hsl(235, 21%, 11%);
+}
+
+section.conten div.form-add form input[type="text"]::placeholder {
+  font-size: 18px;
+}
+
+section.conten div.form-add form input[type="text"]:autofill {
+  background-color: #25273c;
+  font-size: 18px;
+  color: hsl(0, 0%, 98%) ;
+}
+section.conten div.form-add form input[type="text"]:-webkit-autofill {
+  background-color: #25273c;
+  font-size: 18px;
+  color: hsl(0, 0%, 98%) ;
+}
+
+/* List Tasks */
+section.conten div.list-tasks {
+  padding: 0;
+  color: hsl(0, 0%, 98%);
+}
+
+section.conten div.list-tasks.light {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 21%, 11%);
+}
+
+section.conten div.list-tasks div.item-task {
+  padding: 25px 18px 25px 18px;
+  border-bottom: 1px solid hsl(0, 0%, 98%);
+}
+
+section.conten div.list-tasks.light > div.item-task {
+  border-bottom: 1px solid hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 98%);
+}
+
+section.conten div.list-tasks div.item-task div.info-task {
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  text-align: justify;
+  display: flex;
+}
+
+section.conten div.list-tasks div.item-task div.info-task p {
+  line-height: 25px;
+}
+
+section.conten div.list-tasks div.item-task.completed-task {
+  text-decoration: line-through;
+  color: hsl(233, 14%, 35%);
+}
+
+section.conten
+  div.list-tasks
+  div.item-task.completed
+  > div.info-task
+  div.check-point {
+  background-image: linear-gradient(120deg, #57ddff, #c058f3);
+  border: none;
+  text-align: center;
+}
+
+section.conten div.list-tasks div.item-task.completed div.check-point > img {
+  display: inline-block;
+  /* width: 0%; */
+  vertical-align: middle;
+}
+
+/* Action tasks */
+section.conten div div.action-tasks ul.list-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 18px 20px 18px;
+}
+
+section.conten div div.action-tasks ul li {
+  color: hsl(233, 14%, 35%);
+  list-style: none;
+  cursor: pointer;
+}
+
+section.conten div div.action-tasks ul li ul {
+  display: flex;
+}
+
+section.conten div div.action-tasks ul li ul li {
+  margin: 0 10px;
+}
+
+section.conten div div.action-tasks ul li:hover,
+section.conten div div.action-tasks ul li.active {
+  color: hsl(220, 98%, 61%);
+}
+
+section.conten div div.action-tasks ul li.sub-items {
+  background-color: hsl(235, 24%, 19%);
+  border-radius: 5px;
+  box-shadow: 2px 3px 6px 1px hsl(235deg 24% 19%);
+}
+
+section.conten div div.action-tasks ul li.sub-items.light {
+  background-color: hsl(0, 0%, 98%);
+}
+
+/* ***************************************************************** */
+footer {
+  width: 100%;
+}
+.attribution {
+  width: 100%;
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  margin: 30px auto;
+  color: hsl(220, 98%, 61%);
+  
+}
+
+.attribution a {
+  color: hsl(0, 0%, 98%);
+}
+
+
+@media screen and (max-width: 760px) {
+  section.conten {
+    width: 90%;
+    left: 5%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  section.conten div div.action-tasks ul li.sub-items {
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px 18px 20px 18px;
+  }
+
+
+}
