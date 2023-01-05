@@ -1,10 +1,10 @@
 const formAdd = document.querySelector("#form-add");
 const listTasks = document.querySelector("#list-tasks");
-const btnMode = document.querySelector('#btn-mode');
+const btnMode = document.querySelector("#btn-mode");
 let tasks = [];
 
 formAdd.addEventListener("submit", getTask);
-btnMode.addEventListener('click', setMode);
+btnMode.addEventListener("click", setMode);
 
 window.onload = () => {
   allTasks();
@@ -14,6 +14,8 @@ function getTask(event) {
   event.preventDefault();
 
   const task = document.querySelector("#task").value;
+
+  if(task.trim() === '')return
 
   const newTask = {
     task,
@@ -97,19 +99,19 @@ function setNumberItems() {
 }
 
 function allTasks() {
-  deleteActionBtn()
+  deleteActionBtn();
   showTasks();
   document.querySelector("#btn-all").classList.add("active");
 }
 
 function activeTasks() {
-  deleteActionBtn()
+  deleteActionBtn();
   showTasks("Active");
   document.querySelector("#btn-active").classList.add("active");
 }
 
 function completedTasks() {
-  deleteActionBtn()
+  deleteActionBtn();
   showTasks("Completed");
   document.querySelector("#btn-completed").classList.add("active");
 }
@@ -126,21 +128,30 @@ function deleteActionBtn() {
 }
 
 function setMode() {
-
-  if(!document.body.classList.contains('light')) {
-    document.querySelector('#btn-mode').src = './img/icon-moon.svg';
+  if (!document.body.classList.contains("light")) {
+    document.querySelector("#btn-mode").src = "./img/icon-moon.svg";
   } else {
-    document.querySelector('#btn-mode').src = './img/icon-sun.svg';
+    document.querySelector("#btn-mode").src = "./img/icon-sun.svg";
   }
 
-  document.querySelector('body').classList.toggle('light');
-  document.querySelector('header.header').classList.toggle('light');
-  document.querySelector('section.conten div.form-add').classList.toggle('light');
-  document.querySelector('section.conten div.list-tasks').classList.toggle('light');
-  document.querySelector('section.conten div.form-add form input[type="text"]').classList.toggle('light');
-  document.querySelector('section.conten div.list-tasks').classList.toggle('light');
-  document.querySelector('section.conten div div.action-tasks ul li.sub-items').classList.toggle('light');
-  document.querySelector('div.list-tasks').classList.toggle('light');
-
-
+  document.querySelector("body").classList.toggle("light");
+  document.querySelector("header.header").classList.toggle("light");
+  document
+    .querySelector("section.conten div.form-add")
+    .classList.toggle("light");
+  document
+    .querySelector("section.conten div.list-tasks")
+    .classList.toggle("light");
+  document
+    .querySelector('section.conten div.form-add form input[type="text"]')
+    .classList.toggle("light");
+  document
+    .querySelector("section.conten div.list-tasks")
+    .classList.toggle("light");
+  document
+    .querySelector("section.conten div div.action-tasks ul li.sub-items")
+    .classList.toggle("light");
+  document.querySelector("div.list-tasks").classList.toggle("light");
+  // document.querySelector(".attribution a").classList.toggle("light");
+  document.querySelectorAll(".attribution a").forEach( a => a.classList.toggle('light'))
 }

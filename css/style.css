@@ -216,7 +216,7 @@ section.conten div div.action-tasks ul li.active {
 section.conten div div.action-tasks ul li.sub-items {
   background-color: hsl(235, 24%, 19%);
   border-radius: 5px;
-  box-shadow: 2px 3px 6px 1px hsl(235deg 24% 19%);
+  
 }
 
 section.conten div div.action-tasks ul li.sub-items.light {
@@ -241,11 +241,19 @@ footer {
   color: hsl(0, 0%, 98%);
 }
 
+a.light {
+  color: hsl(235, 21%, 11%);
+}
+
 
 @media screen and (max-width: 760px) {
   section.conten {
     width: 90%;
     left: 5%;
+  }
+
+  section.conten div div.action-tasks ul li.sub-items {
+    box-shadow: 2px 3px 6px 1px hsl(235deg 24% 19%);
   }
 
 }
